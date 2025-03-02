@@ -16,7 +16,7 @@ cadena: La cadena con la fórmula.
 ignorar: Conjunto de caracteres a eliminar (Espacios en blanco).
 
 #### **Print**
-- Lista de caracteres sin los elementos ignorados.
+Lista de caracteres sin los elementos ignorados.
 
 
 ## valorar_expresion(expresion: list, izq: int, der: int)
@@ -29,7 +29,7 @@ der: Índice final dentro de la expresión.
 
 #### **Funcionamiento**
 Si la expresión es un solo átomo, devuelve su valor de verdad almacenado.
-Si empieza con `!`, devuelve la negación de la evaluación recursiva.
+Si empieza con !, devuelve la negación de la evaluación recursiva.
 Si la expresión está entre paréntesis, busca el operador principal & o |, y evalúa recursivamente ambos lados:
    & (conjunción): True si **ambos** operandos son True.
    | (disyunción): True si **al menos uno** de los operandos es True.
@@ -38,7 +38,6 @@ Si la expresión está entre paréntesis, busca el operador principal & o |, y e
 True o False según la evaluación.
 -1 si la expresión no es válida.
 
----
 
 ## evaluar_formula(formula: str, atomos: list)
 Determina si una fórmula es una **tautología**, **contradicción** o **contingencia**.
@@ -61,7 +60,6 @@ Clasifica la fórmula:
 0 si es una contradicción.
 -1 si es una contingencia o si la fórmula es inválida.
 
----
 
 ## main()
 Función principal que gestiona la entrada y salida.
@@ -81,7 +79,6 @@ Imprime 1 si es tautología, 0 si es contradicción, -1 si es contingencia.
 
 ### **Parte A**
 #### **Entrada**
-```
 2
 p 1
 q 0
@@ -89,29 +86,20 @@ q 0
 (p & q)
 (p | q)
 !(p & q)
-```
 
 #### **Salida**
-```
 0
 1
 1
-```
 
 ### **Parte B**
 #### **Entrada**
-```
 2
 (p | !p)
 (p & !p)
-```
 
 #### **Salida**
-```
 1
 0
-```
-
----
 
 
