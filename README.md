@@ -21,7 +21,7 @@ La lista de caracteres sin los elementos ignorados.
 ## **generar_valoraciones(atomos: list) -> list[dict]**
 Genera todas las combinaciones posibles de valores de verdad para una lista de átomos.
 
-#### Parámetros:
+#### Parametros:
 - atomos: Lista de variables proposicionales (átomos) presentes en una fórmula lógica.
 
 #### Como funciona?:
