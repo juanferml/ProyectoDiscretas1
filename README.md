@@ -8,7 +8,7 @@ Determinar si una fórmula es una **tautología**, **contradicción** o **contin
 
 ## Funciones
 
-### cadena_a_lista(cadena: str, ignorar: set) -> list[str]
+## cadena_a_lista(cadena: str, ignorar: set) -> list[str]
 Convierte una cadena en una lista de caracteres, eliminando los que están en el conjunto ignorar.
 
 #### **Parámetros**
@@ -18,9 +18,8 @@ ignorar: Conjunto de caracteres a eliminar (Espacios en blanco).
 #### **Print**
 - Lista de caracteres sin los elementos ignorados.
 
----
 
-### valorar_expresion(expresion: list, izq: int, der: int)
+## valorar_expresion(expresion: list, izq: int, der: int)
 Evalúa una expresión lógica utilizando los valores de verdad almacenados.
 
 #### **Print**
@@ -41,7 +40,7 @@ True o False según la evaluación.
 
 ---
 
-### evaluar_formula(formula: str, atomos: list)
+## evaluar_formula(formula: str, atomos: list)
 Determina si una fórmula es una **tautología**, **contradicción** o **contingencia**.
 
 #### **Parámetros**
@@ -64,7 +63,7 @@ Clasifica la fórmula:
 
 ---
 
-### main()
+## main()
 Función principal que gestiona la entrada y salida.
 
 #### **Funcionamiento**
