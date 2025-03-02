@@ -20,15 +20,15 @@ Lista de caracteres sin los elementos ignorados.
 
 
 ## **valorar_expresion(expresion: list, izq: int, der: int)**
-Evalúa una expresión lógica utilizando los valores de verdad almacenados.
+Evalúa una expresión utilizando los valores de verdad almacenados.
 
 #### Parametros:
-Expresion: Lista de caracteres que representa la fórmula lógica.
-izq: Índice inicial dentro de la expresión.
-der: Índice final dentro de la expresión.
+- Expresion: Lista de caracteres que representa la fórmula lógica.
+- izq: Índice inicial dentro de la expresión.
+- der: Índice final dentro de la expresión.
 
 #### Funcionamiento:
-Si la expresión es un solo átomo, devuelve su valor de verdad almacenado. Sino empieza con !, devuelve la negación de la evaluación recursiva. Sino la expresión está entre paréntesis, busca el operador principal & o |, y evalúa recursivamente ambos lados:
+Si la expresión es un solo átomo, devuelve su valor de verdad almacenado, Sino empieza con !, devuelve la negación de la evaluación recursiva, Sino la expresión está entre paréntesis, busca el operador principal & o | y evalúa recursivamente ambos lados:
    - & (conjunción): True si **ambos** operandos son True.
    - | (disyunción): True si **al menos uno** de los operandos es True.
 
@@ -37,22 +37,14 @@ True o False según la evaluación, sino -1 si la expresión no es válida.
 
 
 ## **evaluar_formula(formula: str, atomos: list)**
-Determina si una fórmula es una **tautología**, **contradicción** o **contingencia**.
+Determina si una fórmula es una tautología, contradicción o contingencia.
 
 #### Parametros:
 - formula: La fórmula en formato de cadena.
 - atomos: Lista de átomos que aparecen en la fórmula.
 
 #### Funcionamiento:
-Convierte la fórmula en una lista de caracteres sin espacios.
-Genera todas las combinaciones de valores de verdad para los átomos.
-Evalúa la fórmula con cada combinación y almacena los resultados.
-Clasifica la fórmula:
-    - **Tautología (1)**: Siempre es True.
-    - **Contradicción (0)**: Siempre es False.
-    - **Contingencia (-1)**: Algunas veces True, otras False.
-
-#### Print:
+Convierte la fórmula en una lista de caracteres sin espacios, con esta lista, genera todas las combinaciones de valores de verdad para los átomos, después, evalúa la fórmula con cada combinación y almacena los resultados. Por último clasifica la fórmula:
 - 1 si es una tautología.
 - 0 si es una contradicción.
 - -1 si es una contingencia o si la fórmula es inválida.
@@ -63,14 +55,10 @@ Función principal que gestiona la entrada y salida.
 
 #### Funcionamiento:
 ##### Parte A:
-Lee el número de átomos (N) y sus valores de verdad.
-Lee (M) fórmulas y las evalúa con los valores dados.
-Imprime 1 si la fórmula es True, 0 si es False.
+Lee el número de átomos (N) y sus valores de verdad, también, lee (M) fórmulas y las evalúa con los valores dados e imprime 1 si la fórmula es True, 0 si es False.
 
 ##### Parte B:
-Lee S fórmulas y extrae los átomos presentes.
-Evalúa cada fórmula con todas las combinaciones posibles de valores de verdad.
-Imprime 1 si es tautología, 0 si es contradicción, -1 si es contingencia.
+Lee S fórmulas y extrae los átomos presentes, las evalúa con todas las combinaciones posibles de valores de verdad e imprime 1 si es tautología, 0 si es contradicción, -1 si es contingencia.
 
 ## Ejemplo de Entrada y Salida
 
