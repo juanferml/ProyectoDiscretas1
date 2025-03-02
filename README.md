@@ -24,7 +24,7 @@ Genera todas las combinaciones posibles de valores de verdad para una lista de �
 #### Parametros:
 - atomos: Lista de variables proposicionales (átomos) presentes en una fórmula lógica.
 
-#### Como funciona?:
+#### Como funciona?
 Calcula cuántos átomos hay y cuántas combinaciones posibles existen (2^N) a cada combinación le asigna valores de verdad (True o False) a los átomos, usa divisiones sucesivas para alternar entre False y True de manera ordenada. Devuelve una lista con todos los posibles valores de verdad para los átomos.
 
 #### Return
