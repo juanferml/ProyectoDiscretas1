@@ -41,8 +41,8 @@ Evalúa una expresión utilizando los valores de verdad almacenados.
 
 #### Como funciona?
 Si la expresión es un solo átomo, devuelve su valor de verdad almacenado, Sino empieza con !, devuelve la negación de la evaluación recursiva, Sino la expresión está entre paréntesis, busca el operador principal & o | y evalúa recursivamente ambos lados:
-   - & (conjunción): True si **ambos** operandos son True.
-   - | (disyunción): True si **al menos uno** de los operandos es True.
+   - & (conjunción): True si ambos operandos son True.
+   - | (disyunción): True si al menos uno de los operandos es True.
 
 #### Print:
 True o False según la evaluación, sino -1 si la expresión no es válida.
