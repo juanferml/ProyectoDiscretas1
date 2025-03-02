@@ -27,7 +27,7 @@ Evalúa una expresión utilizando los valores de verdad almacenados.
 - izq: Índice inicial dentro de la expresión.
 - der: Índice final dentro de la expresión.
 
-#### Funcionamiento:
+#### Como funciona?
 Si la expresión es un solo átomo, devuelve su valor de verdad almacenado, Sino empieza con !, devuelve la negación de la evaluación recursiva, Sino la expresión está entre paréntesis, busca el operador principal & o | y evalúa recursivamente ambos lados:
    - & (conjunción): True si **ambos** operandos son True.
    - | (disyunción): True si **al menos uno** de los operandos es True.
@@ -43,7 +43,7 @@ Determina si una fórmula es una tautología, contradicción o contingencia.
 - formula: La fórmula en formato de cadena.
 - atomos: Lista de átomos que aparecen en la fórmula.
 
-#### Funcionamiento:
+#### Como funciona?
 Convierte la fórmula en una lista de caracteres sin espacios, con esta lista, genera todas las combinaciones de valores de verdad para los átomos, después, evalúa la fórmula con cada combinación y almacena los resultados. Por último clasifica la fórmula:
 - 1 si es una tautología.
 - 0 si es una contradicción.
@@ -53,7 +53,7 @@ Convierte la fórmula en una lista de caracteres sin espacios, con esta lista, g
 ## **main()**
 Función principal que gestiona la entrada y salida.
 
-#### Funcionamiento:
+#### Como funciona?
 ##### Parte A:
 Lee el número de átomos (N) y sus valores de verdad, también, lee (M) fórmulas y las evalúa con los valores dados e imprime 1 si la fórmula es True, 0 si es False.
 
